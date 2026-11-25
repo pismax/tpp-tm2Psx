@@ -1,8 +1,7 @@
 # Working on the Tokimeki Memorial 2 parser
 
 Read the [format and evidence worksheet](plan/README.md) for the source profile,
-container routing, and verification results. Use the repository's console
-parser router for the phase that needs further investigation.
+container routing, and verification results before changing a format.
 
 - Keep the Translator++ UI in `tm2Psx.js` and portable project/disc routing in
   `tm2Psx.module.js`. Keep raw formats separate from the app and font rasterizer.
