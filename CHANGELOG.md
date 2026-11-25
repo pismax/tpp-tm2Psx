@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.49 (2026-11-25)
+
+- Added a chibi character icon for the add-on and its New Project entry.
+- Updated the README with more gameplay and Translator++ screenshots, clearer setup steps, and a note explaining that you build the translation from your own discs.
+
 ## 0.1.48 (2026-11-25)
 
 - Shortened the README, added an English title-screen cover, and moved detailed instructions to a usage guide.

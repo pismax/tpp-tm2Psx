@@ -487,7 +487,7 @@ function registerWizard() {
     const slide = $("<div><h2>Tokimeki Memorial 2 (PlayStation)</h2><div class='tm2Fields'></div></div>");
     slide.find(".tm2Fields").before($("<p></p>").text("Choose the Japanese Rev 1 disc folder to import all five discs, or browse for specific BIN/CUE files."));
     ui.newProjectDialog.addMenu({
-        icon: addon.getWebLocation() + "/icon.png", descriptionBar: "<h2>Tokimeki Memorial 2 (PlayStation)</h2>",
+        icon: addon.getWebLocation() + "/" + addon.package.icon, descriptionBar: "<h2>Tokimeki Memorial 2 (PlayStation)</h2>",
         actionBar: "", goToSlide: addon.package.name, at: 8,
         slides: {parser: ui.newProjectDialog.newSlide(addon.package.name, slide, {
             buttons: [{text: t("Create Project"), click: async () => {
