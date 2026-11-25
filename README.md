@@ -1,9 +1,62 @@
 # Tokimeki Memorial 2 (PlayStation)
 
-Import clean Japanese Rev 1 images of Discs 1–5, serials SLPM-86355 through
-SLPM-86359. Select the folder to work on all five discs in one project, or
-select the BIN/CUE files you want to import. Each disc must be a single Mode
-2/2352 data track.
+An independent add-on by Pismax for localizing the original PlayStation release
+of *Tokimeki Memorial 2* with [Translator++](https://dreamsavior.net/docs/translator/).
+The part I like about working on a game like this is seeing the small things
+come together. A line of dialogue sounds like the character who says it, the
+status screen makes sense at a glance, and the player can type a name that fits.
+
+## English showcase
+
+[Watch the English gameplay sample (MP4, 4:14)][video]
+
+![Kasumi speaking in English in the original PlayStation dialogue box][dialogue]
+
+The Disc 2 status screen has English stat labels and a reformatted calendar.
+On Disc 1, the **Symbols** tab lets the player enter up to six Latin letters
+in each name field.
+
+| Disc 2 status screen | Disc 1 name entry |
+| --- | --- |
+| ![English stat labels and calendar on the Disc 2 status screen][status] | ![The name entry screen with Piter Cross entered using Latin letters][name-entry] |
+
+## Inside Translator++
+
+### Speaker context
+
+When I’m editing a scene, I want to know who’s speaking before I settle on
+the wording. The parser labels dialogue rows when it can identify the speaker.
+In the zoo scene below, **Hinomoto** and **MC** are easy to spot, and the
+yellow tag marks the nameplate row that controls the name shown in-game.
+
+![Dialogue grid with Hinomoto and MC speaker labels and a yellow-tagged nameplate row][speakers]
+
+### Text baked into the interface
+
+The name-entry buttons are a good example of text that lives in the artwork.
+The add-on brings those texture sheets into Image Translator, where I can
+edit the labels and preview the result before exporting.
+
+![English name-entry buttons on a texture sheet open in Image Translator][ui-textures]
+
+### Scene artwork for mods
+
+If I want to tinker with the artwork, I can open the captured CGs on demand
+under **Images → tm2 → cg**. The add-on can also extract them as PNGs for
+editing outside Translator++ and bring the replacements back into a build.
+
+![A scene CG showing a character under a yellow umbrella open in Translator++][cg-browser]
+
+## Install and import
+
+The add-on requires Translator++ **8.11.21 or later**. In **8.11.25 or later**,
+open **Options → Add-ons → Install → Community add-ons**, install
+**Tokimeki Memorial 2 Parser**, and restart Translator++.
+Manual installation steps are in the [Pismax add-on catalog](https://github.com/pismax/tpp-addons#install).
+
+Use clean Japanese Rev 1 disc images with serials SLPM-86355 through
+SLPM-86359. Each disc must be a single Mode 2/2352 data track. Import a
+folder for all five discs or select the BIN/CUE files you want to work on.
 
 ## Create a project
 
@@ -16,14 +69,18 @@ select the BIN/CUE files you want to import. Each disc must be a single Mode
    Translator and an active OCR engine.
 4. Choose your target language using the normal Translator++ language controls.
 
+## Dialogue and nameplates
+
 Each dialogue box appears as one row in **Dialogue**, with its line breaks
 inside the cell. Aim for one to four display lines including wrapping in a
 standard box. Boxes with interleaved script events, special render
-flags, or branches inside a page keep their native display slots. Speaker labels appear in the row headers
-when all known paths to an occurrence agree.
+flags, or branches inside a page keep their native display slots. Speaker
+labels appear in the row headers when all known paths to an occurrence agree.
+
 Selectable options have a `choice` row header and dedicated translation
 guidance in Actor Reference. Their occurrence paths include `/choice/`.
 Keep one option per line in the original order.
+
 **Actor Reference** appears under `*`. New projects include brief gender, role,
 and voice guidance for the detected speakers, including
 the custom-named player when relevant. Updates fill missing notes, refresh
@@ -31,6 +88,7 @@ older stock descriptions, and preserve your custom notes and translated names.
 Voiced Shirayuki dialogue can use separate Miho and Maho speaker notes even
 within the same file. Their original nameplates stay translatable separately.
 Fill in name equivalents in your target language.
+
 To change the name drawn by the game, translate the speaker-label row in
 **Dialogue**. Nameplate rows are tagged yellow. New English projects prefill
 short nameplates in **Initial**. When identical text is used as both a
@@ -152,3 +210,11 @@ Export to a folder, ZIP, or use **Inject** to build a separate disc set. Open
 the generated `Tokimeki Memorial 2.m3u` in an emulator that supports playlists,
 or open an individual CUE. Discs with no edits or enabled patches are copied byte-for-byte. If the
 originals move, select the new folder in **Inject** for that build.
+
+[video]: https://raw.githubusercontent.com/pismax/tpp-tm2Psx/v0.1.47/showcase/english-sample.mp4
+[dialogue]: https://raw.githubusercontent.com/pismax/tpp-tm2Psx/v0.1.47/showcase/dialogue.png
+[status]: https://raw.githubusercontent.com/pismax/tpp-tm2Psx/v0.1.47/showcase/status.png
+[name-entry]: https://raw.githubusercontent.com/pismax/tpp-tm2Psx/v0.1.47/showcase/name-entry.png
+[speakers]: https://raw.githubusercontent.com/pismax/tpp-tm2Psx/v0.1.47/showcase/speakers.png
+[ui-textures]: https://raw.githubusercontent.com/pismax/tpp-tm2Psx/v0.1.47/showcase/ui-textures.png
+[cg-browser]: https://raw.githubusercontent.com/pismax/tpp-tm2Psx/v0.1.47/showcase/cg-browser.png
