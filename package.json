@@ -4,7 +4,7 @@
   "description": "Import Tokimeki Memorial 2 directly from Japanese Rev 1 BIN/CUE images, with dialogue, speakers, menus, and editable CG and interface artwork.",
   "main": "tm2Psx.js",
   "homepage": "https://github.com/pismax",
-  "version": "0.1.47",
+  "version": "0.1.48",
   "icon": "icon.png",
   "author": {
     "name": "pismax"
